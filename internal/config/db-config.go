@@ -9,11 +9,11 @@ import (
 )
 
 func GetDBConfig() string {
-	err := godotenv.Load()
+	// err := godotenv.Load()
 
-	if err != nil {
-		log.Fatal("error loading .env file")
-	}
+	// if err != nil {
+	// 	log.Fatal("error loading .env file")
+	// }
 
 	host := os.Getenv("PGHOST")
 	user := os.Getenv("PGUSER")
