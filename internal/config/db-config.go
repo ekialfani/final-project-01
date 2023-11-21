@@ -15,12 +15,12 @@ func GetDBConfig() string {
 		log.Fatal("error loading .env file")
 	}
 
-	host := os.Getenv("DB_HOST")
-	user := os.Getenv("DB_USER")
-	password := os.Getenv("DB_PASSWORD")
-	port := os.Getenv("DB_PORT")
-	dbname := os.Getenv("DB_NAME")
-	sslmode := os.Getenv("DB_SSLMODE")
+	host := os.Getenv("PGHOST")
+	user := os.Getenv("PGUSER")
+	password := os.Getenv("PGPASSWORD")
+	port := os.Getenv("PGPORT")
+	dbname := os.Getenv("PGDATABASE")
+	sslmode := os.Getenv("SSLMODE")
 
 	return fmt.Sprintf("host=%s user=%s password=%s port=%s dbname=%s sslmode=%s", host, user, password, port, dbname, sslmode)
 }
